@@ -20,6 +20,7 @@ export default {
   methods: {
     registerUser: function(user) {
       console.log(user);
+      user.hasAccepted = true;
       this.usersComing.push(user);
     }
   },    
