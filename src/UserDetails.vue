@@ -1,30 +1,16 @@
 <template>
-  <div class="user-details">
-    nom : {{usr.name}} <br>
-    ville: {{usr.address.city}} <br> 
-    email: {{usr.email}} <br>
-    <button v-on:click="acceptInvitation">accepter l'invitation</button>
+  <div>
+      <h2>Détails de l'utilisateur {{this.$route.params.id}}</h2>
+    	<p><router-link to="/users">retour vers la liste</router-link></p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'user-details',
-  methods: {
-    acceptInvitation: function() {
-      this.$emit('accept');
-    }
-  },
-  props: ['usr']
+  name: 'user-details'
 }
 </script>
 
 <style>
-.user-details {
-  border: 2px solid grey;
-  margin: 10px;
-  padding: 15px;
-  width: 250px;
-  float: left;
-}
+
 </style>

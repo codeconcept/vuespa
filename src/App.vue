@@ -1,24 +1,14 @@
 <template>
   <div>
-    <div id="app">
-      <user-list v-bind:data="users" v-bind:section-title="title" v-bind:users-coming="usersWhoWillCome"></user-list> 
-    </div>
-
-    <div>
-      Utilisateurs ayant accepté l'invitation : 
-      <pre>{{usersWhoWillCome}}</pre>
+    <div id="app">      
+      <router-view v-bind:data="users" v-bind:section-title="title" v-bind:users-coming="usersWhoWillCome"></router-view> 
     </div>
   </div>
 </template>
 
 <script>
-import UserList from './UserList.vue';
-
 export default {
   name: 'app',
-  components: {
-    'user-list': UserList
-  },
   data () {
     return {
       users: [],
